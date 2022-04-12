@@ -1,8 +1,18 @@
 import './style.css'
+import { Game } from './models/game'
 
-const app = document.querySelector<HTMLDivElement>('#app')!
+const loop = () => {
+  Game.loop()
 
-app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+  // 1/60秒後にもう一度呼び出す
+  requestAnimationFrame(loop)
+}
+
+// 起動されたときに呼ばれる関数を登録する
+window.addEventListener('load', () => {
+  // まずステージを整える
+  Game.initialize()
+
+  // ゲームを開始する
+  loop()
+})
