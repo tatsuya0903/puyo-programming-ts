@@ -83,13 +83,11 @@ export class Stage {
   }
 
   private static getPuyo(x: number, y: number): BoardCell | null {
-    if (0 <= x && x < this.board.length) {
-      const line = this.board[x]
-      if (0 <= y && y < line.length) {
-        const value = this.board[x][y]
-        if (isPuyoColor(value)) {
-          return value
-        }
+    if (0 <= y && y < this.board.length) {
+      const line = this.board[y]
+      if (0 <= x && x < line.length) {
+        const value = this.board[y][x]
+        return value === 0 ? null : value
       }
     }
     return null
