@@ -1,4 +1,4 @@
-import './style.css'
+import './assets/sass/style.scss'
 import { Game } from './models/game'
 
 const loop = () => {
