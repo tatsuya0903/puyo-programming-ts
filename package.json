@@ -10,5 +10,8 @@
   "devDependencies": {
     "typescript": "^4.5.4",
     "vite": "^2.9.0"
+  },
+  "volta": {
+    "node": "16.14.2"
   }
 }
