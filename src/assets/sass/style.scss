@@ -1,3 +1,32 @@
 body {
   -webkit-user-select: none;
+  margin: 0
 }
+
+#stage {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url(/src/assets/images/puyo_2bg.png);
+}
+
+#score {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: right;
+}
+
+//#stage {
+//  position: absolute;
+//  left: 0;
+//  top: 0;
+//  overflow: hidden;
+//  background: url(/src/assets/images/puyo_2bg.png);
+//}
+//#score {
+//  position: absolute;
+//  left: 0;
+//  top: 0;
+//  overflow: hidden;
+//  text-align: right;
+//}
